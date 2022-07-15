@@ -1,0 +1,51 @@
+@mixin section-titles($shadow-color) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 50px 0;
+    margin-top: 0;
+    & h2{
+        position: absolute;
+        bottom: -10px;
+        font-size: 48px;
+        margin: 0;
+        color: $color-primary;
+    }
+    & span{
+        color: $shadow-color;
+        font-size: 64px;
+    }
+}
+
+@mixin arrow($left-position, $top-position) {
+    display: flex;
+    position: absolute;
+    left: $left-position;
+    top: $top-position;
+    opacity: 0;
+    animation: move 900ms linear 6s infinite alternate, show 900ms linear 6s both;
+    & i{
+        color: $color-secondary;
+        font-size: 2em;
+    }
+
+    @keyframes move {
+        from{
+            transform: translateY(0);
+        }
+        to{
+            transform: translateY(20px);
+        }
+    }
+    
+    @keyframes show {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+}
