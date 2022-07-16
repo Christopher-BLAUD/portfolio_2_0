@@ -7,6 +7,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Open sans", Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
 }
 
 
@@ -16,6 +17,9 @@ header{
     position: absolute;
     width: 100%;
     z-index: 1;
+}
+
+.navbar{
     & ul{
         display: flex;
         padding: 0;
@@ -30,6 +34,19 @@ header{
             }
         }
     }
+    @include mobile{
+        display: none;
+    }
+}
+
+.reveal{
+    flex-direction: column;
+}
+
+.navbar_hamburger{
+    display: none;
+    width: 20px;
+    border-bottom: 3px solid $color-primary;
 }
 
 //      Accueil
@@ -41,8 +58,13 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    justify-content: center;
+    align-items: center;
     @media screen and (min-width: 1300px) and (max-width: 1600px){
         height: 1024px;
+    }
+    @include mobile{
+        height: 100vh;
     }
 }
 
@@ -60,6 +82,20 @@ header{
     @media screen and (min-width: 1300px) and (max-width: 1600px){
         left: 388px;
         top: 228px;
+    }
+    @include mobile{
+        justify-content: center;
+        position: initial;
+        width: 320px;
+        height: 150px;
+        font-size: 20px;
+        background-color: #000000c9;
+        border-radius: 15px;
+        padding: 15px;
+    }
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+        left: 22vw;
+        top: 33vh;
     }
 }
 
@@ -87,39 +123,26 @@ header{
     @include arrow(124px, 338px);
 }
 
-.home_social-links{
-    display: flex;
-    align-self: center;
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    margin: 10px 0;
-    & a{
-        display: flex;
-        padding: 10px;
-        border: 1px solid $color-secondary;
-        border-radius: 50%;
-        margin: 0 20px;
-        font-size: 1.5em;
-        color: $color-secondary;
-        text-decoration: none;
-    }
-}
-
-
 //      A propos
 
 .about{
     display: flex;
     background: #DADADA;
     position: relative;
+    padding: 100px 0;
+    @include mobile{
+        padding: 50px 0;
+    }
 }
 
 .about_content{
     display: flex;
     justify-content: space-evenly;
-    padding: 100px 0;
     width: 100%;
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .about_content_picture{
@@ -128,6 +151,9 @@ header{
     align-items: center;
     margin: 70px;
     position: relative;
+    @include mobile{
+        margin: 30px;
+    }
 }
 
 .about_content_picture_profil{
@@ -147,6 +173,10 @@ header{
         object-fit: cover;
         object-position: top;
     }
+    @include mobile{
+        width: 300px;
+        height: 300px;
+    }
 }
 
 .about_content_picture_circle{
@@ -157,6 +187,9 @@ header{
     position: absolute;
     right: -63px;
     bottom: -30px;
+    @include mobile{
+        display: none;
+    }
 }
 
 .about_content_text{
@@ -165,10 +198,16 @@ header{
     justify-content: center;
     align-items: center;
     width: 500px;
+    @include mobile{
+        width: 310px
+    }
 }
 
 .about_content_text_titles{
     @include section-titles(rgba(255,254,254,.4196078431));
+    @include mobile{
+        margin-top: 50px;
+    }
 }
 
 .about_content_text_signature{
@@ -177,6 +216,9 @@ header{
     font-family: "Mrs Saint Delafield", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 48px;
     color: $color-primary;
+    @include mobile{
+        align-self: auto;
+    }
 }
 
 .about_content_text_description{
@@ -216,12 +258,18 @@ header{
     align-items: center;
     position: relative;
     padding: 100px 0;
+    @include mobile{
+        padding-top: 50px; 
+    }
 }
 
 .portfolio_titles{
     @include section-titles(rgb(157 157 157 / 24%));
     align-self: start;
     margin: 60px;
+    @include mobile{
+        margin-top: 0;
+    }
 }
 
 
@@ -232,6 +280,11 @@ header{
     width: 726px;
     padding: 0;
     margin: 0;
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+        width: 310px;
+    }
 }
 
 .portfolio_container li{
@@ -244,31 +297,37 @@ header{
     position: relative;
     &:hover > .portfolio_container_card_description{
         opacity: 1;
+        visibility: visible;
     }
     & img{
         width: 100%;
         height: 100%;
         object-fit: contain;
     }
+    @include mobile{
+        width: 300px;
+        margin: 10px 0;
+    }
 }
 
 .portfolio_container_card_description{
     display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: calc(100% - 50px);
-        margin: 0;
-        background-color: #000000bd;
-        color: #fff;
-        opacity: 0;
-        transition: all 500ms ease-in-out;
-        padding: 0 25px;
-        font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(100% - 50px);
+    margin: 0;
+    background-color: #000000bd;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease-in-out;
+    padding: 0 25px;
+    font-size: 15px;
         & span{
             display: inline-block;
             border: 1px solid $color-primary;
@@ -287,14 +346,20 @@ header{
 .portfolio_container_card{
     &--medium{
         width: 400px!important;
+        @include mobile{
+            width: 300px!important;
+        }
     }
     &--large{
         width: 658px!important;
+        @include mobile{
+            width: 300px!important;
+        }
     }
 }
 
 .portfolio_direction{
-    @include arrow(100px, 650px)
+    @include arrow(100px, 650px);
 }
 
 //  Compétences techniques
@@ -315,6 +380,14 @@ header{
 
 .skills_titles{
     @include section-titles(rgba(255,254,254,.4196078431));
+    @include mobile{
+        span{
+            font-size: 26px;
+        }
+        h2{
+            font-size: 22px;
+        }
+    }
 }
 
 .skills_container{
@@ -325,6 +398,12 @@ header{
     width: 600px;
     height: 494px;
     margin: 140px 0;
+    @include mobile{
+        flex-direction: column;
+        width: 310px;
+        height: 850px;
+        justify-content: space-between;
+    }
 }
 
 .skills_category{
@@ -415,6 +494,10 @@ header{
 .contact_container{
     display: flex;
     padding: 100px 25px;
+    @include mobile{
+        flex-direction: column;
+        padding: 0 25px;
+    }
 }
 
 .contact_text{
@@ -424,6 +507,13 @@ header{
     padding: 0 50px;
     & p{
         line-height: 3;
+        @include mobile{
+            line-height: 1.5;
+        }
+    }
+    @include mobile{
+        width: auto;
+        padding: 0;
     }
 }
 
@@ -432,18 +522,25 @@ header{
     font-size: 48px;
     color: $color-primary;
     margin: 50px 0;
+    @include mobile{
+        text-align: center;
+    }
 }
 
 .contact_form{
     display: flex;
     justify-content: center;
     width: 50%;
+    @include mobile{
+        width: auto;
+    }
 }
 
 
 form{
     display: flex;
     flex-direction: column;
+    align-items: center;
     & input{
         border: none;
         border-bottom: 1px solid $color-secondary;
@@ -451,6 +548,9 @@ form{
         margin: 10px 0;
         padding: 5px;
         width: 424px;
+        @include mobile{
+            width: 300px;
+        }
         &::placeholder{
             color: #a7a7a7;
             font-size: 14px;
@@ -462,6 +562,9 @@ form{
         padding: 5px;
         width: 424px;
         resize: none;
+        @include mobile{
+            width: 300px;
+        }
     }
     & label{
         font-size: 14px;
@@ -477,5 +580,27 @@ form{
         padding: 15px 10px;
         color: #fff;
         margin: 20px 0;
+        @include mobile{
+            width: 310px;
+        }
+    }
+}
+
+.contact_social-links{
+    display: flex;
+    align-self: center;
+    margin: 10px 0;
+    @include mobile{
+        margin: 30px 0;
+    }
+    & a{
+        display: flex;
+        padding: 10px;
+        border: 1px solid $color-secondary;
+        border-radius: 50%;
+        margin: 0 20px;
+        font-size: 1.5em;
+        color: $color-secondary;
+        text-decoration: none;
     }
 }
