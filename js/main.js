@@ -1,4 +1,4 @@
-
+//  Animation de saisie de texte 
 
 let typedHello = new Typed(".home_title_hello", {
     strings: ["Hello,"],
@@ -27,4 +27,16 @@ let typed = new Typed(".auto-type", {
     startDelay: 4400,
     showCursor: false,
     shuffle: false,
+})
+
+//  Affichage de la barre de navigation
+
+$('.navbar_icon').on('click', () => {
+    $('.navbar_icon').toggleClass('active')
+    $('.navbar').toggleClass('reveal')
+})
+
+$('.navbar li a').on('click', () => {
+    $('.navbar_icon').toggleClass('active')
+    $('.navbar').toggleClass('reveal')
 })
