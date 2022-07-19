@@ -13,6 +13,7 @@
     <title>Christopher BLAUD | Développeur Web</title>
 </head>
 <body>
+    <div class="scroll-top"><i class="fa-solid fa-circle-chevron-up"></i></div>
     <header>
         <div class="navbar_icon" id="link-navbar" aria-label="afficher la barre de navigation">
             <span></span>
@@ -186,11 +187,11 @@
                 </div>
                 <div class="contact_form">
                     <form method="post" action="contact.php">
-                        <input type="text" name="name" placeholder="Nom">
-                        <input type="tel" name="phone" placeholder="Téléphone">
-                        <input type="email" name="email" placeholder="Adresse email">
+                        <input type="text" name="name" placeholder="Nom" required>
+                        <input type="tel" name="phone" placeholder="Téléphone" required>
+                        <input type="email" name="email" placeholder="Adresse email" required>
                         <label for="message">Votre message</label>
-                        <textarea name="message" cols="30" rows="10"></textarea>
+                        <textarea name="message" cols="30" rows="10" required></textarea>
                         <button type="submit">Envoyer</button>
                     </form>
                 </div>

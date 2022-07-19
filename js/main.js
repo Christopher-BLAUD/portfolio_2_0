@@ -40,3 +40,14 @@ $('.navbar li a').on('click', () => {
     $('.navbar_icon').toggleClass('active')
     $('.navbar').toggleClass('reveal')
 })
+
+$(window).on('scroll', () => {
+    $('.scroll-top').toggleClass('show', window.scrollY > 500)
+})
+
+$('.scroll-top').on('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+});
