@@ -4,21 +4,21 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: 50px 0;
-    margin-top: 0;
+    margin-bottom: 100px;
     & h2{
         position: absolute;
-        bottom: -10px;
-        font-size: 48px;
+        bottom: -4px;
+        font-size: 32px;
         margin: 0;
-        color: $color-primary;
+        color: $color-tertiary;
         @include mobile{
             font-size: 24px;
         }
     }
     & span{
         color: $shadow-color;
-        font-size: 64px;
+        font-size: 37px;
+        filter: blur(2px);
         @include mobile{
             font-size: 32px;
         }
@@ -71,4 +71,11 @@
     @media screen and (min-width: 768px) and (max-width: 1024px) {
         @content;
     }
+}
+
+@mixin background-params($url) {
+    background: url($url), $color-tertiary;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
