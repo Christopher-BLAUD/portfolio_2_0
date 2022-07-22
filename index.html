@@ -13,11 +13,19 @@
     <title>Christopher BLAUD | Développeur Web</title>
 </head>
 <body>
-    <div class="scroll-top"><i class="fa-solid fa-circle-chevron-up"></i></div>
+    <div class="scroll-top">
+        <i class="fa-solid fa-circle-chevron-up"></i>
+    </div>
+    <div class="navbar_icon" id="link-navbar" aria-label="afficher la barre de navigation">
+        <span></span>
+    </div>
     <header>
-        <div class="navbar_icon" id="link-navbar" aria-label="afficher la barre de navigation">
-            <span></span>
+        <div class="header-logo">
+            <span class="header-logo_letter">CB</span>
+            <span class="header-logo_dot">.</span>
         </div>
+    </header>
+    <main>
         <nav class="navbar">
             <ul class="navbar_list">
                 <li>
@@ -37,8 +45,6 @@
                 </li>
             </ul>
         </nav>
-    </header>
-    <main>
         <section class="home" id="accueil">
             <div class="home_title">
                 <span class="home_title_hello"></span>
@@ -75,68 +81,104 @@
                 <span class="portfolio_titles_shadow">Portfolio</span>
                 <h2>Portfolio</h2>
             </div>
-            <ul class="portfolio_container">
-                <li class="portfolio_container_card--medium">
-                    <img src="./assets/images/pc_kanap.png" alt="photo du projet kanap">
-                    <div class="portfolio_container_card_description">
-                        <span>Kanap</span>
-                        <p>
-                            Site web e-commerce
-                        </p>
-                        <a href="https://github.com/Christopher-BLAUD/BlaudChristopher_3_22112021">Voir le code source</a>
-                    </div>
-                </li>
-                <li class="portfolio_container_card">
-                    <img src="./assets/images/4.jpg" alt="bureau d'un designer">
-                    <div class="portfolio_container_card_description">
-                        <span>La chouette agence</span>
-                        <p>                        
-                            Optimisation d'un site web existant. Les performances ont été améliorées et la charte grafique a été revue pour respecter les standards WCAG.
-                        </p>
-                        <a href="">Consulter le site</a>
-                    </div>
-                </li>
-                <li class="portfolio_container_card">
-                    <img src="./assets/images/piiquante.jpg" alt="photo d'une bouteille de sauce pimentée">
-                    <div class="portfolio_container_card_description">
-                        <span>Piiquante</span>
-                        <p>
-                            Création d'une API sécurisée pour application web d'avis de critique gastronomique
-                        </p>
-                        <a href="https://github.com/Christopher-BLAUD/P6_Piiquante">Voir le code source</a>
-                    </div>
-                </li>
-                <li class="portfolio_container_card--medium">
-                    <img src="./assets/images/phone_omf.jpg" alt="photo de l'application ohmyfood sur un smartphone">
-                    <div class="portfolio_container_card_description">
-                        <span>Ohmyfood</span>
-                        <p>
-                            Ce site répertorie les menus des restaurants gastronomiques
-                        </p>
-                        <a href="https://christopher-blaud.github.io/BlaudChristopher_3_22112021/" target="_blank">Consulter le site</a>
-                    </div>
-                </li>
-                <li class="portfolio_container_card--large">
-                    <img src="./assets/images/Booki@3x.png" alt="logo du site de booki">
-                    <div class="portfolio_container_card_description">
-                        <span>Booki</span>
-                        <p>
-                            Intégration d'une maquette pour une entreprise de planification de vacances. Basé sur le Matériel Design
-                        </p>
-                        <a href="https://christopher-blaud.github.io/P2_Booki/" target="_blank">Consulter le site</a>
-                    </div>
-                </li>
-                <li class="portfolio_container_card--large">
-                    <img src="./assets/images/logo-gp.png" alt="logo du réseau social groupomania">
-                    <div class="portfolio_container_card_description">
-                        <span>Groupomania</span>
-                        <p>
-                            Réseau social professionnel destiné aux salariés de l'entreprise Groupomania.
-                        </p>
-                        <a href="https://github.com/Christopher-BLAUD/Groupomania_P7">Voir le code source</a>
-                    </div>
-                </li>
-            </ul>
+                <ul class="portfolio_container">
+                    <li class="portfolio_container_card">
+                        <div class="portfolio_container_card_picture">
+                            <img src="./assets/images/pc_kanap.png" alt="photo du projet kanap">
+                        </div>
+                        <div class="portfolio_container_card_content">
+                            <div class="portfolio_container_card_content_text">
+                                <h3>Kanap</h3>
+                                <p>
+                                    Site web e-commerce
+                                </p>
+                            </div>
+                            <div class="portfolio_container_card_content_action">
+                                <button id="more">
+                                    <a href="https://github.com/Christopher-BLAUD/P5_kanap" target="_blank">En savoir plus</a>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="portfolio_container_card">
+                        <div class="portfolio_container_card_picture">
+                            <img src="./assets/images/4.jpg" alt="bureau d'un designer">
+                        </div>
+                        <div class="portfolio_container_card_content">
+                            <div class="portfolio_container_card_content_text">
+                                <h3>La chouette agence</h3>
+                                <p>
+                                    Agence de web design
+                                </p>
+                            </div>
+                            <div class="portfolio_container_card_content_action">
+                                <button id="demo">
+                                    <a href="https://christopher-blaud.github.io/P4_blaud_christopher/" target="_blank">Démo</a>
+                                </button>
+                                <button id="more">
+                                    <a href="https://github.com/Christopher-BLAUD/P4_blaud_christopher" target="_blank">En savoir plus</a>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="portfolio_container_card">
+                        <div class="portfolio_container_card_picture">
+                            <img src="./assets/images/booki.png" alt="logo du site de booki">
+                        </div>
+                        <div class="portfolio_container_card_content">
+                            <div class="portfolio_container_card_content_text">
+                                <h3>Booki</h3>
+                                <p>
+                                    Site de réservation de voyage sur mesure
+                                </p>
+                            </div>
+                            <div class="portfolio_container_card_content_action">
+                                <button id="demo">
+                                    <a href="https://christopher-blaud.github.io/P2_Booki/" target="_blank">Démo</a>
+                                </button>
+                                <button id="more">
+                                    <a href="https://github.com/Christopher-BLAUD/P2_Booki" target="_blank">En savoir plus</a>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="portfolio_container_card">
+                        <div class="portfolio_container_card_picture">
+                            <img src="./assets/images/groupo.png" alt="logo du réseau social groupomania">
+                        </div>
+                        <div class="portfolio_container_card_content">
+                            <div class="portfolio_container_card_content_text">
+                                <h3>Groupomania</h3>
+                                <p>
+                                    Réseau social
+                                </p>
+                            </div>
+                            <div class="portfolio_container_card_content_action">
+                                <button id="more">
+                                    <a href="https://github.com/Christopher-BLAUD/Groupomania_P7" target="_blank">En savoir plus</a>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="portfolio_container_card">
+                        <div class="portfolio_container_card_picture">
+                            <img src="./assets/images/piquante.png" alt="photo d'une bouteille de sauce pimentée">
+                        </div>
+                        <div class="portfolio_container_card_content">
+                            <div class="portfolio_container_card_content_text">
+                                <h3>Piiquante</h3>
+                                <p>
+                                    Application de critique gastronomique
+                                </p>
+                            </div>
+                            <div class="portfolio_container_card_content_action">
+                                <button id="more">
+                                    <a href="https://github.com/Christopher-BLAUD/P6_Piiquante" target="_blank">En savoir plus</a>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>         
         </section>
         <section class="skills" id="competences">
             <div class="skills_titles">

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@glidejs/glide": "^3.5.2",
     "autoprefixer": "^10.4.7",
     "sass": "^1.53.0"
   },

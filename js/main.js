@@ -1,5 +1,6 @@
 //  Animation de saisie de texte 
 
+
 let typedHello = new Typed(".home_title_hello", {
     strings: ["Hello,"],
     typeSpeed: 60,
@@ -51,3 +52,4 @@ $('.scroll-top').on('click', () => {
         behavior: "smooth"
     })
 });
+
