@@ -8,6 +8,7 @@
     <meta name="title" content="Christopher BLAUD | Développeur Web">
     <!-- stylesheet -->
     <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Christopher BLAUD | Développeur Web</title>
@@ -64,12 +65,29 @@
                     <div class="about_content_picture_circle"></div>
                 </div>
                 <div class="about_content_text">
-                    <div class="about_content_text_titles">
+                    <!-- AOS -->
+                    <div  
+                    class="about_content_text_titles"
+                    data-aos="fade-right" 
+                    data-aos-duration="1000" 
+                    >
                         <span class="about_content_text_titles_shadow">À PROPOS DE MOI</span>
                         <h2>À PROPOS DE MOI</h2>
                     </div>
-                    <span class="about_content_text_signature">Christopher Blaud</span>
-                    <p class="about_content_text_description">Passionné depuis toujours par l’univers d’internet et des nouvelles technologies, c'est en 2021 que par le biais d'une reconversion professionnelle, et aussi de mon désir insatiable d'apprendre, que j'ai décidé de bifurquer vers une carrière de Développeur web. Une réelle opportunité pour moi de travailler dans un domaine pour lequel je suis déterminé à mettre à profit mes compétences.</p>
+                    <span class="about_content_text_signature"  
+                    data-aos="fade-left" data-os-delay="1500" 
+                    data-aos-duration="1000"
+                    >
+                    Christopher Blaud
+                    </span>
+                    <!-- AOS -->
+                    <p class="about_content_text_description"  
+                    data-aos="fade-left" 
+                    data-os-delay="2500" 
+                    data-aos-duration="1500"
+                    >
+                        Passionné depuis toujours par l’univers d’internet et des nouvelles technologies, c'est en 2021 que par le biais d'une reconversion professionnelle, et aussi de mon désir insatiable d'apprendre, que j'ai décidé de bifurquer vers une carrière de Développeur web. Une réelle opportunité pour moi de travailler dans un domaine pour lequel je suis déterminé à mettre à profit mes compétences.
+                    </p>
                     <button>
                         <a href="./assets/CV_christopher_blaud.pdf" target="_blank">Télécharger mon CV</a>
                     </button>
@@ -82,7 +100,7 @@
                 Je suis un développeur web full stack spécialisé dans le développement front-end (la partie visible d'un site ou d'une application) qui s'intéresse de près au design d'interface ainsi qu'à l'expérience utilisateur.
             </p>
             <p>
-                Je construis des projets de A à Z en définissant avec vous le produit, vos besoins, pour répondre au mieux à vos attentes. De la conception de l'outil, en passant par l'intégration des pages et le développement des différentes fonctionnalités.
+                Je construis des projets de A à Z en définissant avec vous le produit, vos besoins, pour répondre au mieux à vos attentes. De la conception de l'outil, en passant par l'intégration des pages et le développement des différentes fonctionnalités sur tout support (Ordinateur, smartphone et tablette).
             </p>
             <p>
                 Egalement compétent dans l'optimisation des performances d'un site existant, l'amélioration du référencement naturel (SEO) et la mise en ligne. Je peux vous accompagner dans toutes les étapes de votre projet.
@@ -93,8 +111,13 @@
                 <span class="portfolio_titles_shadow">PORTFOLIO</span>
                 <h2>PORTFOLIO</h2>
             </div>
+            <span class="portfolio_subtitle">Mes derniers projets</span>
                 <ul class="portfolio_container">
-                    <li class="portfolio_container_card">
+                    <!-- AOS -->
+                    <li class="portfolio_container_card" 
+                    data-aos="flip-up" 
+                    data-aos-duration="1000"
+                    >
                         <div class="portfolio_container_card_picture">
                             <img src="./assets/images/pc_kanap.png" alt="photo du projet kanap">
                             <div class="portfolio_container_card_picture_action">
@@ -110,15 +133,19 @@
                                 </p>
                         </div>
                     </li>
-                    <li class="portfolio_container_card">
+                    <!-- AOS -->
+                    <li class="portfolio_container_card" 
+                    data-aos="flip-up"
+                    data-aos-duration="1000"
+                    >
                         <div class="portfolio_container_card_picture">
                             <img src="./assets/images/4.jpg" alt="bureau d'un designer">
                             <div class="portfolio_container_card_picture_action">
-                                <button id="demo">
-                                    <a href="https://christopher-blaud.github.io/P4_blaud_christopher/" target="_blank">Démo</a>
-                                </button>
                                 <button id="more">
                                     <a href="https://github.com/Christopher-BLAUD/P4_blaud_christopher" target="_blank">En savoir plus</a>
+                                </button>
+                                <button id="demo">
+                                    <a href="https://christopher-blaud.github.io/P4_blaud_christopher/" target="_blank">Démo</a>
                                 </button>
                             </div>
                         </div>
@@ -129,15 +156,19 @@
                                 </p>
                         </div>
                     </li>
-                    <li class="portfolio_container_card">
+                    <!-- AOS -->
+                    <li class="portfolio_container_card" 
+                    data-aos="flip-up" 
+                    data-aos-duration="1000"
+                    >
                         <div class="portfolio_container_card_picture">
                             <img src="./assets/images/booki.png" alt="logo du site de booki">
                             <div class="portfolio_container_card_picture_action">
-                                <button id="demo">
-                                    <a href="https://christopher-blaud.github.io/P2_Booki/" target="_blank">Démo</a>
-                                </button>
                                 <button id="more">
                                     <a href="https://github.com/Christopher-BLAUD/P2_Booki" target="_blank">En savoir plus</a>
+                                </button>
+                                <button id="demo">
+                                    <a href="https://christopher-blaud.github.io/P2_Booki/" target="_blank">Démo</a>
                                 </button>
                             </div>
                         </div>
@@ -148,7 +179,11 @@
                                 </p>
                         </div>
                     </li>
-                    <li class="portfolio_container_card">
+                    <!-- AOS -->
+                    <li class="portfolio_container_card" 
+                    data-aos="flip-up" 
+                    data-aos-duration="1000"
+                    >
                         <div class="portfolio_container_card_picture">
                             <img src="./assets/images/groupo.png" alt="logo du réseau social groupomania">
                             <div class="portfolio_container_card_picture_action">
@@ -164,7 +199,11 @@
                                 </p>
                         </div>
                     </li>
-                    <li class="portfolio_container_card">
+                    <!-- AOS -->
+                    <li class="portfolio_container_card" 
+                    data-aos="flip-up" 
+                    data-aos-duration="1000"
+                    >
                         <div class="portfolio_container_card_picture">
                             <img src="./assets/images/piquante.png" alt="photo d'une bouteille de sauce pimentée">
                             <div class="portfolio_container_card_picture_action">
@@ -188,7 +227,10 @@
                 <h2>COMPETENCES TECHNIQUES</h2>
             </div>
             <div class="skills_container">
-                <div class="skills_category front">
+                <div class="skills_category front"
+                data-aos="zoom-out-right"
+                data-aos-duration="1000"
+                >
                     <div class="skills_category_picture">
                         <img src="./assets/images/dev_front.png" alt="icone de développement frontend">
                     </div>
@@ -201,7 +243,11 @@
                         <li>Bootstrap</li>
                     </ul>
                 </div>
-                <div class="skills_category back">
+                <div class="skills_category back" 
+                data-aos="zoom-out"
+                data-os-delay="500"
+                data-aos-duration="1000"
+                >
                     <div class="skills_category_picture">
                         <img src="./assets/images/dev_back.png" alt="icone de développement frontend">
                     </div>
@@ -213,7 +259,10 @@
                         <li>MySQL</li>
                         <li>PHP</li>
                     </ul>                </div>
-                <div class="skills_category version">
+                <div class="skills_category version"
+                data-aos="zoom-out-left"
+                data-aos-duration="1000"
+                >
                     <div class="skills_category_picture">
                         <img src="./assets/images/dev_version.png" alt="icone de développement frontend">
                     </div>
@@ -266,8 +315,12 @@
             </div>
         </section>
     </main>
+    <footer>
+        <span><i class="fa-solid fa-copyright"></i> 2022 by Christopher BLAUD. Tous droits réservés.</span>
+    </footer>
     <script src="https://kit.fontawesome.com/0c464140a2.js" crossorigin="anonymous"></script>
     <script src="./js/lib/typed.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/main.js"></script> 
 </body>

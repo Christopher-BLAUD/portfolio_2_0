@@ -548,6 +548,12 @@ main{
     }
 }
 
+.portfolio_subtitle{
+    color: $color-tertiary;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
 
 .portfolio_container{
     display: flex;
@@ -560,6 +566,10 @@ main{
         width: 310px;
         padding: 0;
     }
+    @include touch-pad{
+        width: 100%;
+        flex-direction: row;
+    }
 }
 
 .portfolio_container_card{
@@ -567,20 +577,24 @@ main{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
     list-style: none;
-    width: 300px;
+    width: 310px;
     margin: 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 5px 5px 21px #5e5e5e;
+    box-shadow: 5px 5px 21px #000;
+    border-radius: 15px;
+    overflow: hidden;
     @include mobile{
         margin: 20px 0;
+    }
+    @include touch-pad{
+        margin: 20px;
     }
     &_picture{
         width: 100%;
         height: 210px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
         overflow: hidden;
         position: relative;
         & img{
@@ -588,6 +602,10 @@ main{
             height: 100%;
             object-fit: cover;
         }
+    }
+    &:hover > .portfolio_container_card_content{
+        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -600,13 +618,14 @@ main{
     bottom: 0;
     & button{
         backdrop-filter: blur(4px);
-        background-color: #00000069;
+        background-color: #ffb704;
+        border-radius: 20px;
         border: none;
-        border-radius: 15px;
         width: 150px;
-        height: 35px;
+        height: 40px;
         margin: 5px;
         position: relative;
+        transition: all 200ms ease-in-out;
         & a{
             display: flex;
             align-items: center;
@@ -615,18 +634,18 @@ main{
             font-weight: 600;
             width: 100%;
             height: 100%;
-            color: #fff;
+            color: #000;
             text-decoration: none;
+        }
+        &:hover{
+            transform: scale(0.9);
         }
     }
 }
 
 #demo{
-    background-color: #ffffff5e;
+    background-color: #00ff06;
     width: 100px;
-    & a{
-        color: #000;
-    }
 }
 
 
@@ -635,14 +654,22 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: absolute;
+    background-color: #000000ab;
+    backdrop-filter: blur(4px);
+    color: #fff;
     width: calc(100% - 20px);
     padding: 0 10px 10px 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms linear;
     & h3{
         margin: 0;
         margin-top: 10px;
     }
     & p{
         margin: 0;
+        font-weight: 300;
     }
 }
 
@@ -823,7 +850,7 @@ form{
             border-radius: 0;
         }
         &::placeholder{
-            color: #a7a7a7;
+            color: #fff;
             font-size: 14px;
         }
     }
@@ -841,7 +868,7 @@ form{
     }
     & label{
         font-size: 14px;
-        color: #a7a7a7;
+        color: #fff;
         margin-left: 5px;
         margin-bottom: 5px;
         margin-top: 10px;
@@ -888,4 +915,14 @@ form{
             border-color: #b38515;
         }
     }
+}
+
+//  Footer
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: $color-secondary;
+    margin: 5px;
 }

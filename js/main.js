@@ -53,3 +53,7 @@ $('.scroll-top').on('click', () => {
     })
 });
 
+
+// Initialisation de l'animation au scroll
+
+AOS.init()
