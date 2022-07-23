@@ -9,8 +9,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ./sass/main.scss:public/style.css --style compressed",
-    "prefix": "postcss ./public/style.css -use autoprefixer -d ./public/"
+    "sass": "sass --watch ./sass/main.scss:public/style.css --style expanded",
+    "prefix": "postcss ./public/style.css -use autoprefixer -d ./public/prefixed"
   },
   "author": "",
   "license": "ISC",
